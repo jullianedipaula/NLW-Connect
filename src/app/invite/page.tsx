@@ -5,6 +5,8 @@ import { Ranking } from './ranking'
 import { Stats } from './stats'
 
 export default function InvatePage() {
+  const inviteLink = 'http://localhost:3000/invite/1234789'
+
   return (
     <div className="min-h-dvh flex items-center flex-col justify-between gap-16 md:flex-row">
       <div className="flex flex-col gap-10 w-full max-w-[550px]">
@@ -32,7 +34,7 @@ export default function InvatePage() {
           </div>
         </div>
 
-        <InviteLinkInput />
+        <InviteLinkInput inviteLink={inviteLink} />
 
         <Stats />
       </div>
