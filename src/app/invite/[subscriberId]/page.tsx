@@ -5,14 +5,14 @@ import { Ranking } from './ranking'
 import { Stats } from './stats'
 
 interface InvitePageProps {
-  params:  Promise< {
+  params: Promise<{
     subscriberId: string
   }>
 }
 
 export default async function InvatePage(props: InvitePageProps) {
-  const { subscriberId } =await props.params
-  
+  const { subscriberId } = await props.params
+
   const inviteLink = `http://localhost:3333/invites/${subscriberId}`
 
   return (
@@ -44,7 +44,7 @@ export default async function InvatePage(props: InvitePageProps) {
 
         <InviteLinkInput inviteLink={inviteLink} />
 
-        <Stats />
+        <Stats subscriberId={subscriberId} />
       </div>
 
       <Ranking />
